@@ -1,0 +1,54 @@
+<script type="text/javascript">
+var Volume = 50;
+var ytplayer;
+
+function SetVolume(contents)
+{
+	Volume = contents;
+
+	if (ytplayer)
+		ytplayer.setVolume(Volume);
+}
+
+function SetVideoPanelHTML(contents)
+{
+	document.getElementById('videopanel').innerHTML = contents;
+}
+
+function YTonStateChange(state)
+{
+	SetVolume(Volume);
+}
+
+function Seek(seektime)
+{
+	if (ytplayer)
+		ytplayer.seekTo(seektime, true);
+}
+
+function onYouTubePlayerReady(playerid)
+{
+	ytplayer = document.getElementById('playerobject');
+	if (ytplayer)
+		ytplayer.addEventListener('onStateChange', 'YTonStateChange');
+
+	SetVolume(Volume);
+}
+
+function currentTime()
+{
+	if (ytplayer)
+	ytplayer.getCurrentTime():Number;
+}
+
+</script>
+<style type="text/css"></style></head>
+
+<body scroll="no" id="id_body">
+
+<div id="videopanel">
+</div>
+
+
+
+</body></html>
