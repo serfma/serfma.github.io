@@ -39,7 +39,11 @@ function onYouTubePlayerReady(playerid)
 	SetVolume(Volume);
 }
 
-
+function currentTime()
+{
+	if (ytplayer)
+	ytplayer.getCurrentTime();
+}
 
 </script>
 </head>
