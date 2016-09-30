@@ -2,7 +2,6 @@
 <html>
   <body>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    JustForTesting
     <div id="player"></div>
 
     <script>
@@ -18,8 +17,8 @@
       var player;
       function onYouTubeIframeAPIReady() {
           player = new YT.Player('player', {
-              height: 120,
-              width: 120,
+              height: 854,
+              width: 480,
               videoId: "",
               events: {
                 'onReady': onPlayerReady,
