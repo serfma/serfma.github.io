@@ -32,7 +32,8 @@
       }
       
       function setVolume( volume ) {
-        player.setVolume( volume ); 
+        if (player)
+          player.setVolume( volume ); 
       }
       
       function stopVideo() {
