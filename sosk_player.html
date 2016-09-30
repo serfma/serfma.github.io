@@ -20,7 +20,7 @@
       
       var player;
       function playVideo( width, height, videoId ) {
-        if (player)
+        if (player && player.destroy)
           player.destroy()
           
         player = new YT.Player('player', {
