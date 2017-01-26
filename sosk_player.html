@@ -45,10 +45,8 @@
       //    The function indicates that when playing a video (state=1),
       //    the player should play for six seconds and then stop.
       function onPlayerStateChange(event) {
-          console.log("RUNLUA:print("+event+")");
-          if (event === 1) {
+          if (event.data == 1) {
               console.log("RUNLUA:if IsValid( atmosphere.panel ) then atmosphere.panel:SongCatch() end");
-              console.log("RUNLUA:print('Atmosphere JavaScript Test Please Ignore')");
           }
       }
     </script>
